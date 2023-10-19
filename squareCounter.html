@@ -1,0 +1,67 @@
+<html>
+<title>Square Counter</title>
+<style>
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        animation: rotate 5s linear infinite;
+        margin: 10%;
+    }
+
+    @keyframes rainbow {
+            0% {
+                color: red;
+            }
+            14% {
+                color: orange;
+            }
+            28% {
+                color: yellow;
+            }
+            42% {
+                color: green;
+            }
+            57% {
+                color: blue;
+            }
+            71% {
+                color: indigo;
+            }
+            85% {
+                color: violet;
+            }
+            100% {
+                color: red;
+            }
+        }
+
+        .rainbow-text {
+            animation: rainbow 5s linear infinite;
+        }
+</style>
+<div class="title">
+    <h1 class="rainbow-text">Square Counter</h1>
+</div>
+<div style="display: flex;flex-direction: row;">
+    <div 
+    style="display: flex;align-items: center;justify-content: center;border: 1px solid black; height: 100px;width: 100px; background: red;"  id="red" onclick="counter(this)"></div>
+    <div 
+    style="display: flex;align-items: center;justify-content: center;border: 1px solid black; height: 100px;width: 100px; background: yellow" id="yellow" onclick="counter(this)"></div>
+    <div
+     style="display: flex;align-items: center;justify-content: center;border: 1px solid black; height: 100px;width: 100px; background: green" id="green" onclick="counter(this)"></div>
+</div>
+<button style="margin: 2%;" onclick="reset()">reset</button>
+<script src="index.js"></script>
+
+</html>
